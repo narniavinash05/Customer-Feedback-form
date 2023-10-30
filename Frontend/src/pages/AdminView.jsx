@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import axiosInstance from "../components/api";
 import Spinner from "../components/Spinner";
 import Logout from "./Logout";
-import PushToHome from '../components/PushToHome';
 import NavBar from "../components/NavBar";
 
 

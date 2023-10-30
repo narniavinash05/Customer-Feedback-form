@@ -4,7 +4,7 @@ import Comment from "../components/Comment";
 import Rating from "../components/Rating";
 import axiosInstance from "../components/api";
 import Logout from "./Logout";
-import PushToHome from "../components/PushToHome";
+
 import NavBar from "../components/NavBar";
 
 function UserView() {
