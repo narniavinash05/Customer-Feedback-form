@@ -27,9 +27,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
-          <Route path="/"  exact
-            element={<View />}
-            />
+          <Route path="/" exact element={<ProtectedRoute element={<View />} />} />
           <Route path="/user"  element={<ProtectedRoute element={<UserView />} />} />
           <Route path="/admin" element={<ProtectedRoute element={<AdminView />} />} />
         </Routes>

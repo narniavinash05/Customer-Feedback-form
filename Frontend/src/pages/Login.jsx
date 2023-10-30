@@ -57,7 +57,7 @@ function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-evenly bg-gray-100">
+    <div className="min-h-screen flex flex-col items-center justify-evenly bg-gradient-to-r from-purple-200 to-cyan-200">
        <div>
         <HomePage />
        </div>
