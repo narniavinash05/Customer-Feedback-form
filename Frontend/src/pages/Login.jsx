@@ -17,13 +17,14 @@ function LoginPage() {
 
   const handleLogin = async (e) => {
 
-    e.preventDefault();
+    e.preventDefault(); //Prevents the default form submission behaviour.
     setIsLoading(true);
 
     const authData = {
       userName: userName,
       password: password,
     };
+    //request headers
     const headers = {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -37,7 +38,7 @@ function LoginPage() {
     };
 
     try {
-      const authResponse = await axios(config);
+      const authResponse = await axios(config);//login request to the server
       if (authResponse.status === 200) {
         const data = authResponse.data;
         Cookies.set("jwt_token", data.jwtToken);
