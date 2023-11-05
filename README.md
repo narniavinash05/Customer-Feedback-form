@@ -1,6 +1,7 @@
-  BCBSM Full Stack Developer Candidate Coding Exercise
-  
-## Requirements:
+Customer feedback form
+
+Below tasks are done in this project:
+
 1.	Create a single page web application with a login screen (username, password)
 2.	Demonstrate user login and authentication/authorization using Spring WebSecurity with USER and ADMIN roles
 3.	Upon login as a USER present the user with the ability to submit feedback with a number rating and a comment. User must be logged in to access this page
@@ -17,5 +18,5 @@
 
 ## Tech Stack:  
 Springboot  
-Angular/NextJS/ReactJS  
-MongoDB/MySql
+ReactJS  
+MySql
