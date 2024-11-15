@@ -34,85 +34,83 @@ import com.myorg.feedback.services.UserService;
 import com.myorg.feedback.util.JwtUtil;
 
 @RestController
-@RequestMapping(value="/api")
+@RequestMapping(value = "/api")
 public class FeedbackController {
-	
-	Logger log = LogManager.getLogger(FeedbackController.class);
-	
+
+    Logger log = LogManager.getLogger(FeedbackController.class);
+
     @Autowired
     private FeedbackService feedbackService;
 
     @Autowired
     private UserService userService;
-    
+
     @Autowired
     AuthenticationManager authenticationManager;
-    
+
     @Autowired
     JwtUtil jwtUtil;
 
-    @PostMapping(value="/feedback")
+    @PostMapping(value = "/feedback")
     public Feedback submitFeedback(@RequestBody FeedbackRequest request) throws Exception {
-    	
-    	  Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-          String username = authentication.getName(); // Get the username of the current user
 
-          // Load the complete user object, including the Id
-          User user = userService.findByUsername(username);
-          Long userId = user.getId(); 
-    	
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName(); // Get the username of the current user
+
+        // Load the complete user object, including the Id
+        User user = userService.findByUsername(username);
+        Long userId = user.getId();
+
         Feedback feedback = new Feedback();
-		feedback.setUserId(userId.toString());
-		feedback.setRating(request.getRating());
-		feedback.setDateTime(ZonedDateTime.now());
-		feedback.setFeedbackText(request.getComment());
-		feedback.setUsername(username);
-		return feedbackService.save(feedback);
+        feedback.setUserId(userId.toString());
+        feedback.setRating(request.getRating());
+        feedback.setDateTime(ZonedDateTime.now());
+        feedback.setFeedbackText(request.getComment());
+        feedback.setUsername(username);
+        return feedbackService.save(feedback);
     }
 
-    @PostMapping(value="/feedback/signup")
+    @PostMapping(value = "/feedback/signup")
     public User addUser(@RequestBody NewUserRequest request) throws Exception {
-    	
-    	  log.info("username - " + request.getUsername());
-    	  log.info("password - " + request.getPassword());
-    	  
-    	  if(userService.findByUsername(request.getUsername()) != null) throw new Exception("username already Exists");
-    	  
-          User user = new User();
-          user.setUserName(request.getUsername());
-          user.setPassword(request.getPassword());
-          user.setRole(request.getRole());
-    	
-		return userService.save(user);
+
+        log.info("username - " + request.getUsername());
+        log.info("password - " + request.getPassword());
+
+        if (userService.findByUsername(request.getUsername()) != null) throw new Exception("username already Exists");
+
+        User user = new User();
+        user.setUserName(request.getUsername());
+        user.setPassword(request.getPassword());
+        user.setRole(request.getRole());
+
+        return userService.save(user);
     }
- 
-    @GetMapping(value="/feedback/admin")
+
+    @GetMapping(value = "/feedback/admin")
     public List<Feedback> getAllFeedbackForAdmin() {
-    	
-      return feedbackService.findAll();
-    }
-    
 
-    @GetMapping(value="/feedback/self")
+        return feedbackService.findAll();
+    }
+
+
+    @GetMapping(value = "/feedback/self")
     public List<Feedback> getMyFeedback() {
-    	
-    	  Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-          String username = authentication.getName(); // Get the username of the current user
-          
-          User user = userService.findByUsername(username);
-          Long userId = user.getId(); 
-                    
-          return feedbackService.findAllByUserId(userId.toString()); 
-    }
-    
 
-    @PostMapping(value="/feedback/login", consumes = MediaType.APPLICATION_JSON_VALUE)
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName(); // Get the username of the current user
+
+        User user = userService.findByUsername(username);
+        Long userId = user.getId();
+
+        return feedbackService.findAllByUserId(userId.toString());
+    }
+
+
+    @PostMapping(value = "/feedback/login", consumes = MediaType.APPLICATION_JSON_VALUE)
     public AuthResponse generateToken(@RequestBody LoginRequest authRequest) throws Exception {
-    	
-    	AuthResponse response = new AuthResponse();
+
+        AuthResponse response = new AuthResponse();
         try {
-        		
-        	
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getUserName(), authRequest.getPassword()));
             User user = userService.findByUsername(authRequest.getUserName());
@@ -121,10 +119,10 @@ public class FeedbackController {
         } catch (Exception ex) {
             throw new Exception("Invalid Credentials");
         }
-        
+
         response.setJwtToken(jwtUtil.generateToken(authRequest.getUserName()));
         response.setUserName(authRequest.getUserName());
-        
+
         return response;
     }
 }

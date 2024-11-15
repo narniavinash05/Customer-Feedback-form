@@ -17,15 +17,15 @@ import com.myorg.feedback.jpa.UserRepository;
 @Component
 public class CustomUserDetailsService implements UserDetailsService {
 
-	@Autowired
-	UserRepository repository;
+    @Autowired
+    UserRepository repository;
 
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		// TODO Auto-generated method stub
-		User user = repository.findByUserName(username);
-		return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getPassword(),
-				Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole())));
-	}
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        // TODO Auto-generated method stub
+        User user = repository.findByUserName(username);
+        return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getPassword(),
+                Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole())));
+    }
 
 }

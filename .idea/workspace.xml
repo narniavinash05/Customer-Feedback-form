@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06e58e60-a124-4351-bb67-47d64fa1babc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/controllers/FeedbackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/controllers/FeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/jpa/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/jpa/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/jpa/FeedbackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/jpa/FeedbackRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/jpa/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/jpa/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/model/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/model/AuthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/model/FeedbackRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/model/FeedbackRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/model/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/model/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/model/NewUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/model/NewUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/security/CORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/security/CORSFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/security/CustomSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/security/CustomSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/security/JwtTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/security/JwtTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/services/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/services/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/services/FeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/services/FeedbackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/myorg/feedback/util/JwtUtil.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2oVF2N0ULYNDHtnKieAkhcZylbe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FeedbackApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.feedback [clean,install,-DSkiptests].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.feedback [clean,install,-Dskiptests].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.feedback [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/narni/Desktop/Customer-Feedback-form&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install -Dskiptests" />
+      <command value="mvn clean install -DSkiptests" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="FeedbackApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myorg.feedback.FeedbackApplication" />
+      <module name="feedback" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myorg.feedback.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FeedbackApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06e58e60-a124-4351-bb67-47d64fa1babc" name="Changes" comment="" />
+      <created>1730946627291</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730946627291</updated>
+    </task>
+    <servers />
+  </component>
+</project>
